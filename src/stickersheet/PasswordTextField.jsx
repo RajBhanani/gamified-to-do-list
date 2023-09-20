@@ -3,11 +3,11 @@ import { IconButton, InputAdornment } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import WhiteTextField from "./WhiteTextField";
 
-const PasswordTextField = () => {
+const PasswordTextField = ({label = "Password"}) => {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <WhiteTextField
-      label="Password"
+      label={label}
       type={showPassword ? "text" : "password"}
       InputProps={{
         endAdornment: (
